@@ -303,6 +303,147 @@
     margin-top: 20px;
     gap:10px;
     }
+
+    #about {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.about-container {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #444;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.about-container p {
+  margin-bottom: 18px;
+}
+
+.about-container strong {
+  font-weight: 700;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  #about {
+    padding: 40px 15px;
+  }
+
+  #about h2 {
+    font-size: 24px;
+  }
+
+  .about-container {
+    font-size: 15px;
+  }
+}
+
+
+/* Projects Section */
+#projects {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: #0b1124;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color:#38bdf8;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #0097a7;
+}
+
+
+.project-card:nth-child(2) .btn {
+  position: relative;
+  top: 100px; /* زودي الرقم ده لو عايزة تنزليه أكتر */
+}
+.project-card:nth-child(1) .btn {
+  position: relative;
+  top: 50px; /* زودي الرقم ده لو عايزة تنزليه أكتر */
+}
+
+
+
+
+/* Tools Section */
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.tools div {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tools div:hover {
+  transform: translateY(-5px);
+  background: #292929;
+}
+
+.tools-container p {
+  font-size: 19px; 
+  line-height: 1.8;
+}
+
+
   </style>
 </head>
 <body class="light">
@@ -316,10 +457,16 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certificates">Certificates</a></li>
+       <li><a href="#projects">Projects</a></li>
+       <li><a href="#tools">Tools</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><button class="theme-toggle" id="themeToggle">Dark</button></li>
     </ul>
   </nav>
+
+
+
+
 
   <!-- Hero -->
   <header class="hero">
@@ -332,23 +479,41 @@
     </div>
     <div class="btn-container">
       <a href="#contact" class="btn">Get in Touch ✨</a>
-      <a href="c:\Users\samae\Downloads\Sama-Ahmed-Abo-Elnour-FlowCV-Resume-20250805.pdf" class="btn" target="_blank">View CV 📄</a>
+      <a href="C:\Users\samae\Downloads\Sama-Ahmed-Abo-Elnour-FlowCV-Resume-20251016 (1).pdf" class="btn" target="_blank">View CV 📄</a>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
     
-     I'm Sama, a Software Testing Engineer and Computer Science student at MTI University, specializing in Quality Assurance and Quality Control.  
-     I'm passionate about uncovering hidden issues, improving software quality, and ensuring users get reliable and smooth experiences.  
-     I enjoy designing detailed test cases, performing manual and automated testing, and focusing on performance and security across different environments.  
-     Curiosity drives me to ask the right questions, explore risks, and think like the end user to turn challenges into reliable solutions.  
-     I'm also expanding my knowledge in coding and automation to strengthen my technical skills and build a solid career in the software industry.  
-     My goal is simple: deliver software that earns trust, minimizes risks, and makes every release more valuable and enjoyable for users. 🎨
+  <section id="about">
+  <h2>About Me 👩‍💻</h2>
+
+  <div class="about-container">
+
+    <p>
+      I'm <strong>Sama</strong>, a <strong>Software Testing Engineer</strong> and 
+      <strong>Computer Science </strong> specializing in <strong>Quality Assurance</strong> 
+      and <strong>Quality Control</strong>.  
+      I'm passionate about uncovering hidden issues, improving software quality, 
+      and ensuring users get reliable, seamless experiences.
     </p>
-  </section>
+
+    <p>
+      I design detailed test cases, perform both manual and automated testing, 
+      and focus on performance and security across different environments.  
+      Curiosity drives me to ask the right questions, explore risks, 
+      and think like the end user to turn challenges into reliable solutions.
+    </p>
+
+    <p>
+      I'm also expanding my knowledge in <strong>coding</strong> and <strong>automation</strong> 
+      to strengthen my technical skills and build a solid career in the software industry.  
+      My goal is clear — deliver software that earns trust, minimizes risks, 
+      and makes every release more valuable for users.
+    </p>
+
+  </div>
+</section>
 
   <!-- Skills -->
   <section id="skills">
@@ -427,6 +592,52 @@
     </div>
   </section>
   
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects💻 </h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3>1. E-Commerce Website Testing</h3>
+      <p>Performed comprehensive manual and automated testing on an online store using <strong>Selenium</strong> and <strong>Postman</strong>. Created detailed test cases, executed regression and functional testing, and reported bugs through <strong>Jira</strong>.</p>
+      <p><strong>Tools:</strong> Selenium, Postman, Jira</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>2. Banking System QA Project</h3>
+      <p>Developed a complete test plan and test cases for a core banking system. Conducted API testing, performance testing, and usability reviews to ensure security and reliability.</p>
+      <p><strong>Tools:</strong> JMeter, Postman, TestLink</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+  
+     <div class="project-card">
+       <h3>3. University Project: Smart Attendance System </h3>
+        <p>
+        A Computer Science graduation project focused on automating attendance tracking using facial recognition.  
+        The system captures and verifies student identities through a webcam, stores data securely,  
+        and generates detailed attendance reports for instructors.
+       </p>
+       <p><strong>Tools used:</strong> Python, OpenCV, MySQL, Tkinter</p>
+       <a href="#" class="btn btn-secondary">View Project</a>
+      </div>
+
+  </div>
+</section>
+
+<!-- Tools Section -->
+
+
+<section id="tools">
+  <h2>Tools & Technologies 🧠</h2>
+  <div class="tools-container">
+    <p>🧩 Selenium  | 🧠 Postman  | 💻 Jira  | 🧾 Excel   | 📊 MySQL   | 🔍 Git & GitHub | ⚙️ VS Code | ☁️ API Testing</p>
+  </div>
+</section>
+
+
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
@@ -435,7 +646,7 @@
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message ✉️</button>
+      <button type="submit">Send Message  ✉️</button>
     </form>
   </section>
 
